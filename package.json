@@ -1,0 +1,33 @@
+{
+  "name": "gulp-showdown",
+  "description": "Gulp Showdown Plugin",
+  "version": "0.0.2",
+  "homepage": "https://github.com/xieranmaya/gulp-showdown",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xieranmaya/gulp-showdown.git"
+  },
+  "author": {
+    "name": "xieranmaya",
+    "email": "xieranmaya@gmail.com"
+  },
+  "main": "./gulp-showdown.js",
+  "keywords": [
+    "gulpplugin", "gulp-showdown"
+  ],
+  "dependencies": {
+    "showdown": "^0.4.0",
+    "gulp-util": "^3.0.4",
+    "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "licenses": "MIT",
+  "bugs": {
+    "url": "https://github.com/xieranmaya/gulp-showdown/issues"
+  }
+}
