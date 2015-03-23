@@ -1,7 +1,9 @@
 var gutil = require('gulp-util')
 var through = require('through2')
 var Showdown = require('showdown')
-var converter = new Showdown.converter({extensions:['table']})
+var converter = new Showdown.converter({
+  extensions: ['table']
+})
 
 function gulpShowdown() {
   return through.obj(function(file, encoding, cb) {
@@ -11,7 +13,7 @@ function gulpShowdown() {
 
     file.contents = new Buffer(fileHtml)
 
-    file.path = file.path.replace(/\.\w+$/gi, '.html');
+    file.path = gutil.replaceExtension(file.path, '.html')
 
     this.push(file)
 
