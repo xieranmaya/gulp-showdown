@@ -1,24 +1,27 @@
 var gutil = require('gulp-util')
 var through = require('through2')
 var Showdown = require('showdown')
-var converter = new Showdown.converter({
-  extensions: ['table']
-})
 
-function gulpShowdown() {
-  return through.obj(function(file, encoding, cb) {
-    var fileText = file.contents.toString()
+function gulpShowdown(options) {
+    var defaultOptions = {
+        extensions: ['table']
+    }
 
-    var fileHtml = converter.makeHtml(fileText)
+    var converter = new Showdown.converter(options || defaultOptions)
 
-    file.contents = new Buffer(fileHtml)
+    return through.obj(function (file, encoding, cb) {
+        var fileText = file.contents.toString()
 
-    file.path = gutil.replaceExtension(file.path, '.html')
+        var fileHtml = converter.makeHtml(fileText)
 
-    this.push(file)
+        file.contents = new Buffer(fileHtml)
 
-    cb(null, file)
-  })
+        file.path = gutil.replaceExtension(file.path, '.html')
+
+        this.push(file)
+
+        cb(null, file)
+    })
 }
 
 module.exports = gulpShowdown
