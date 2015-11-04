@@ -1,7 +1,7 @@
 {
   "name": "gulp-showdown",
   "description": "Gulp Showdown Plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/xieranmaya/gulp-showdown",
   "repository": {
     "type": "git",
