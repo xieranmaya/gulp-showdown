@@ -13,12 +13,13 @@
   },
   "main": "./gulp-showdown.js",
   "keywords": [
-    "gulpplugin", "gulp-showdown"
+    "gulpplugin",
+    "gulp-showdown"
   ],
   "dependencies": {
-    "showdown": "^0.4.0",
     "gulp-util": "^3.0.4",
-    "through2": "^0.6.3"
+    "showdown": "^1.4.2",
+    "through2": "^2.0.1"
   },
   "devDependencies": {
     "gulp": "^3.8.7"
