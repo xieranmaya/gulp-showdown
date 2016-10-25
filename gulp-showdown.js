@@ -7,7 +7,7 @@ function gulpShowdown(options) {
         extensions: ['table']
     }
 
-    var converter = new Showdown.converter(options || defaultOptions)
+    var converter = new Showdown.Converter(options || defaultOptions)
 
     return through.obj(function (file, encoding, cb) {
         var fileText = file.contents.toString()
