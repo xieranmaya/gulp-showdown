@@ -16,7 +16,7 @@
     "gulpplugin", "gulp-showdown"
   ],
   "dependencies": {
-    "showdown": "^0.4.0",
+    "showdown": "^1.4.3",
     "gulp-util": "^3.0.4",
     "through2": "^0.6.3"
   },
