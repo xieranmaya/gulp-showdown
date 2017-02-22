@@ -4,7 +4,7 @@ var Showdown = require('showdown')
 
 function gulpShowdown(options) {
     var defaultOptions = {
-        extensions: ['table']
+        extensions: []
     }
 
     var converter = new Showdown.Converter(options || defaultOptions)
