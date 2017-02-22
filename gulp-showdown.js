@@ -17,7 +17,7 @@ function gulpShowdown(options) {
 
         this.push(file)
 
-        cb(null, file)
+        cb(null)
     })
 }
 
