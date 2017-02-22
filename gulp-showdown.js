@@ -3,11 +3,8 @@ var through = require('through2')
 var Showdown = require('showdown')
 
 function gulpShowdown(options) {
-    var defaultOptions = {
-        extensions: ['table']
-    }
-
-    var converter = new Showdown.Converter(options || defaultOptions)
+  
+    var converter = new Showdown.Converter(options)
 
     return through.obj(function (file, encoding, cb) {
         var fileText = file.contents.toString()
@@ -20,7 +17,7 @@ function gulpShowdown(options) {
 
         this.push(file)
 
-        cb(null, file)
+        cb(null)
     })
 }
 
