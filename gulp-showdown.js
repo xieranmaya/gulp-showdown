@@ -18,8 +18,6 @@ function gulpShowdown(options) {
 
         file.path = gutil.replaceExtension(file.path, '.html')
 
-        this.push(file)
-
         cb(null, file)
     })
 }
